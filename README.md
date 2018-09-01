@@ -24,6 +24,12 @@ P.S.: Make sure everything works with latest version that is on github :)
 
 P.P.S.: Asume that your API will be used by a frontend developer to build frontend on top of that.
 
+### How to use:
+* Database properties is in file called **postgres.properties**
+* project uses **Java 8** (you can use later versions too)
+* You can authorize by followed users:
+> User:password
+> Admin:admin
 
 # CURL commands:
 
