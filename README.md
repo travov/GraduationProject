@@ -25,66 +25,67 @@ P.S.: Make sure everything works with latest version that is on github :)
 P.P.S.: Asume that your API will be used by a frontend developer to build frontend on top of that.
 
 
-#CURL commands:
+# CURL commands:
 
-###Vote
+### Vote
 
-	Vote for Restaurant with id 100002 
+* Vote for Restaurant with id 100002 
 ```curl -s -X POST http://localhost:8080/vote/100002 --user User:password```
-	Getting Vote
+* Getting Vote
 ```curl -s http://localhost:8080/vote/get/100012 --user User:password```
-	Getting all Votes
+* Getting all Votes
 ```curl -s http://localhost:8080/vote/getAll --user Admin:admin```
-	Update Vote
+* Update Vote
 ```curl -s -X PUT -d '{"id":100012, "user_id":100001, "restaurant_id":100002, "voted":"2017-03-20"}' -H 'Content-Type: application/json' http://localhost:8080/vote/update --user Admin:admin```
-	Delete Vote
+
+* Delete Vote
 ```curl -s -X DELETE http://localhost:8080/vote/delete/100012 --user Admin:admin```
-	Get Votes between
+* Get Votes between
 ```curl -s "http://localhost:8080/vote/list?startDate=2015-02-02&endDate=2018-03-20" --user Admin:admin```
-	Get Votes between dates with restaurant id
+* Get Votes between dates with restaurant id
 ```curl -s "http://localhost:8080/vote/list/100003?startDate=2015-02-02&endDate=2018-03-20" --user Admin:admin```
-	Get Votes with exact restaurant id
+* Get Votes with exact restaurant id
 ```curl -s "http://localhost:8080/vote/list_rest/100003" --user Admin:admin```
 
-###Dish
+### Dish
 
-	Add dish to Restaurant 
+* Add dish to Restaurant 
 ```curl -s -X POST -d '{"name":"new Dish", "day":"2018-08-30", "price":300}' -H 'Content-Type: application/json' http://localhost:8080/dish/add/100003 --user Admin:admin```
-	Get All Dishes
+* Get All Dishes
 ```curl -s "http://localhost:8080/dish/getAll" --user Admin:admin ```
-	Get Dish
+* Get Dish
 ```curl -s "http://localhost:8080/dish/100008" --user Admin:admin```
-	Update Dish
+* Update Dish
 ```curl -s -X PUT -d '{"id":100004, "name":"Updated Dish", "day":"2018-08-30", "price":300}' -H 'Content-Type: application/json' http://localhost:8080/dish/update/100002 --user Admin:admin```
-	Delete Dish
+* Delete Dish
 ```curl -s -X DELETE http://localhost:8080/dish/100004 --user Admin:admin```
-	Get Dishes between dates
+* Get Dishes between dates
 ```curl -s "http://localhost:8080/dish/list?startDate=2015-05-31&endDate=2018-08-31" --user Admin:admin```
-	Get Dishes with Restaurant id
+* Get Dishes with Restaurant id
 ```curl -s "http://localhost:8080/dish/list/100003" --user Admin:admin```
 
-###Restaurant
+### Restaurant
 
-	Create new Restaurant
+* Create new Restaurant
 ```curl -s -X POST -d '{"name":"new Russian Restaurant"}' -H 'Content-Type: application/json' http://localhost:8080/rest/add --user Admin:admin```
-	Update Restaurant
+* Update Restaurant
 ```curl -s -X PUT -d '{"id":100003, "name":"Updated Restaurant"}' -H 'Content-Type: application/json' http://localhost:8080/rest/update --user Admin:admin```
-	Delete Restaurant
+* Delete Restaurant
 ```curl -s -X DELETE http://localhost:8080/rest/100002 --user Admin:admin```
-	Get Restaurant
+* Get Restaurant
 ```curl -s "http://localhost:8080/rest/100003" --user User:password```
-	Get All Restaurants
+* Get All Restaurants
 ```curl -s "http://localhost:8080/rest/getAll" --user User:password```
 
-###User
+### User
 
-	Get all users
+* Get all users
 ```curl -s "http://localhost:8080/admin/getAll" --user Admin:admin```
-	Get user
+* Get user
 ```curl -s "http://localhost:8080/admin/100000" --user Admin:admin```
-	Create new User
+* Create new User
 ```curl -s -X POST -d '{"login":"new User", "password":"12345", "roles":["ROLE_USER"]}' -H 'Content-Type: application/json' http://localhost:8080/admin/create --user Admin:admin```
-	Update User
+* Update User
 ```curl -s -X PUT -d '{"id":100000, "login":"updated User", "password":"12345", "roles":["ROLE_USER"]}' -H 'Content-Type: application/json' http://localhost:8080/admin/update --user Admin:admin```
-	Delete User
+* Delete User
 ```curl -s -X DELETE http://localhost:8080/admin/100000 --user Admin:admin```
