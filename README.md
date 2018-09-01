@@ -31,7 +31,7 @@ P.P.S.: Asume that your API will be used by a frontend developer to build fronte
 > User:password  
 > Admin:admin
 
-# CURL commands:
+### CURL commands:
 
 ### Vote
 
