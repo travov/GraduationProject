@@ -28,7 +28,7 @@ P.P.S.: Asume that your API will be used by a frontend developer to build fronte
 * Database properties is in file called **postgres.properties**
 * project uses **Java 8** (you can use later versions too)
 * You can authorize by followed users:
-> User:password
+> User:password  
 > Admin:admin
 
 # CURL commands:
